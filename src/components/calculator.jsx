@@ -1,42 +1,45 @@
 import React, { useState } from "react";
 
 const Calculator = () => {
-  const [val1, setVal1] = useState('');
-  const [val2, setVal2] = useState('');
+  const [numberOne, setNumberOne] = useState('');
+  const [numberTwo, setNumberTwo] = useState('');
   const [operatorMenu, setOperatorMenu] = useState('add');
-  const [result, setResult] = useState('');
+  const [answer, setAnswer] = useState('');
 
-const calculate = (val1, operatorMenu, val2) => {
-val1 = parseInt(val1)
-val2 = parseInt(val2)
+const calculate = (numberOne, operatorMenu, numberTwo) => {
+numberOne = parseInt(numberOne)
+numberTwo = parseInt(numberTwo)
 
-if (!isNaN(val1) || !isNaN(val2)) {
+if (!isNaN(numberOne) || !isNaN(numberTwo)) {
   switch (operatorMenu) {
   case "add":
-  return val1 + val2
+  return numberOne + numberTwo
   case "subtract":
-  return val1 - val2;
+  return numberOne - numberTwo;
   case "multiply":
-  return val1 * val2;
+  return numberOne * numberTwo;
   case "divide":
-  return val1 / val2;
-  default:
-}}}
+  return numberOne / numberTwo;
+  default: 
+  return 'make valid entry'
+}} else {
+  return 'Error!'
+}}
 
 
   return (
     <>
     <section>
-        <input type="text" onChange={event => setVal1(event.target.value)} value= {val1}/>
-         <select name="operator" onChange={event => setOperatorMenu(event.target.value)} value={operatorMenu}>
+        <input type="text" onChange={event => setNumberOne(event.target.value)} value= {numberOne}/>
+         <select onChange={event => setOperatorMenu(event.target.value)} value={operatorMenu}>
           <option value="add">Add</option>
           <option value="subtract">Subtract</option>
           <option value="multiply">Multiply</option>
           <option value="divide">Divide</option>
         </select>
-        <input type="text" onChange={event => setVal2(event.target.value)} value= {val2}/>
-         <button onClick={event => setResult(calculate(val1, operatorMenu, val2))}>=</button>
-         <input type="text" onChange={event => setResult(event.target.value)} value={result} />
+        <input type="text" onChange={event => setNumberTwo(event.target.value)} value= {numberTwo}/>
+        <button onClick={_event => setAnswer(calculate(numberOne, operatorMenu, numberTwo))}>=</button>
+         <input type="text" onChange={event => setAnswer(event.target.value)} value={answer} />
     </section>
     </>
 );
