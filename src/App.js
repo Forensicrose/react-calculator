@@ -1,4 +1,3 @@
-import './App.css';
 import Title from './components/title'
 import Calculator from './components/calculator'
 

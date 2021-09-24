@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Title = () => {
-    return <h1> 
+    return <h1 className='title'> 
         React Calculator
     </h1>
 }
