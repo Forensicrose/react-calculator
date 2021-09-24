@@ -1,0 +1,53 @@
+body {
+  background-color: skyblue;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.title {
+  text-align: center;
+  margin: 100px;
+  font-size: 65px;
+}
+
+.operatorList {
+  text-align: center;
+  font-size: 20px;
+}
+
+.menu {
+  color: palevioletred;
+  border-radius: 300px;
+  padding-left: 15px;
+  font-weight: bold;
+}
+
+.val1 {
+  color: palevioletred;
+  border-radius: 300px;
+  padding-left: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.val2 {
+  color: palevioletred;
+  border-radius: 300px;
+  padding-left: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.answer {
+  color: palevioletred;
+  border-radius: 300px;
+  padding-left: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+.btn {
+  color: palevioletred;
+  border-radius: 300px;
+  padding-left: 15px;
+  font-weight: bold;
+  text-align: left;
+}
